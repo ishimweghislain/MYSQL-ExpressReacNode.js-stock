@@ -42,7 +42,7 @@ function App() {
           <Route path="/login" element={!isAuthenticated ? <Login setIsAuthenticated={setIsAuthenticated} /> : <Navigate to="/" />} />
           <Route
             path="/"
-            element={isAuthenticated ? <InventoryView /> : <Navigate to="/login" />}
+            element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
           />
           <Route
             path="/dashboard"
@@ -61,6 +61,7 @@ function App() {
             element={isAuthenticated ? <UserView /> : <Navigate to="/login" />}
           />
           <Route
+           whatever
             path="/categories/add"
             element={isAuthenticated ? <CategoryAdd /> : <Navigate to="/login" />}
           />
